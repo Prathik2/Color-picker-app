@@ -1,6 +1,7 @@
 import React from "react";
 import { Rgb } from "./Components/RgbComp/Rgb";
 import { makeStyles } from "@mui/styles";
+import { HexComp } from "./Components/HexComp/HexComp";
 
 // Define styles using makeStyles
 const useStyles = makeStyles({
@@ -65,6 +66,7 @@ function App() {
         <Rgb color={"Green"} minRange={0} maxRange={255} onColorChange={handleGreenColorData} />
         <Rgb color={"Blue"} minRange={0} maxRange={255} onColorChange={handleBlueColorData} />
       </div>
+      <HexComp></HexComp>
     </div>
   );
 }
