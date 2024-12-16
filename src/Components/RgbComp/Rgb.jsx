@@ -27,12 +27,13 @@ const useStyles = makeStyles({
   },
 });
 
-export const Rgb = ({ color, minRange, maxRange }) => {
+export const Rgb = ({ color, minRange, maxRange, onColorChange }) => {
   const classes = useStyles();
   const [value, setValue] = useState(minRange);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    onColorChange(newValue);
   };
 
   return (
