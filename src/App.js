@@ -2,6 +2,8 @@ import React from "react";
 import { Rgb } from "./Components/RgbComp/Rgb";
 import { makeStyles } from "@mui/styles";
 import { HexComp } from "./Components/HexComp/HexComp";
+import Divider from '@mui/material/Divider';
+
 
 // Define styles using makeStyles
 const useStyles = makeStyles({
@@ -34,14 +36,19 @@ const useStyles = makeStyles({
     boxSizing: "border-box",
     marginTop: "10px",
     paddingTop: "33px",
+  },
+  footerDiv: {
+    position: "absolute",
+    display: "block",
+    bottom: "10px",
   }
 });
 
 function App() {
   const classes = useStyles();
-  const [redColorValue, setRedColorValue] = React.useState(0);
-  const [greenColorValue, setGreenColorValue] = React.useState(0);
-  const [blueColorValue, setBlueColorValue] = React.useState(0);
+  const [redColorValue, setRedColorValue] = React.useState(125);
+  const [greenColorValue, setGreenColorValue] = React.useState(125);
+  const [blueColorValue, setBlueColorValue] = React.useState(125);
 
   const handleRedColorData = (data) => {
     setRedColorValue(data);
@@ -66,7 +73,9 @@ function App() {
         <Rgb color={"Green"} minRange={0} maxRange={255} onColorChange={handleGreenColorData} />
         <Rgb color={"Blue"} minRange={0} maxRange={255} onColorChange={handleBlueColorData} />
       </div>
+      <Divider variant="middle" style={{width: '95%',}}/>
       <HexComp></HexComp>
+      <div className={classes.footerDiv}>Developed with ❤️ by Prathik</div>
     </div>
   );
 }
