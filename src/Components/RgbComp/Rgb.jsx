@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     margin: "20px",
     backgroundColor: "#f5f5f5",
     borderRadius: "8px",
-    padding: "10px",
+    padding: "10px 20px",
     boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
   },
   slider: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 
 export const Rgb = ({ color, minRange, maxRange, onColorChange }) => {
   const classes = useStyles();
-  const [value, setValue] = useState(minRange);
+  const [value, setValue] = useState(125);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
