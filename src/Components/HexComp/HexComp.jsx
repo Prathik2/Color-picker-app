@@ -17,6 +17,11 @@ const useStyles = makeStyles({
         boxSizing: "border-box",
         marginTop: "10px",
         paddingTop: "33px", 
+    },
+    '@media only screen and (max-width: 600px)': { 
+        colorDiv: {
+            width: "300px",
+        }
     }
 })
 

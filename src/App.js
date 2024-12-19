@@ -41,6 +41,25 @@ const useStyles = makeStyles({
     position: "absolute",
     display: "block",
     bottom: "10px",
+  },
+  '@media only screen and (max-width: 600px)': {
+    components: {
+      display: "flex",
+      flexDirection: "column",
+    },
+    footerDiv: {
+      position: "relative",
+      marginTop: "20px"
+    },
+    colorDiv: {
+      width: "300px",
+      boxSizing: "border-box"
+    },
+    container: {
+      height: "100%",
+      backgroundColor: "#b0b9d1",
+      boxSizing: "border-box",
+    }
   }
 });
 
